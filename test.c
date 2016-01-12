@@ -3,20 +3,33 @@
 int main(int argc, char const *argv[])
 {
 
-	char ** pair[20][2];
-	char * pre_puzzle_key; char * secret_key;
-	get_pair(20,pair);
-	for (int i = 0; i < 20; ++i)
+	char pair[20][2];
+	char pre_puzzle_key[16];
+	char secret_key[16];
+
+	char *p_pre_puzzle_key = pre_puzzle_key;
+	char *p_secret_key = secret_key;
+	char *p_pair = pair;
+
+	//get_key(p_pre_puzzle_key,p_secret_key);
+	//print_key(p_secret_key);
+	//print_key(p_pre_puzzle_key);
+
+
+	get_pair(20,p_pair);
+	printf("%s\n","test1" );
+
+	/*for (int i = 0; i < 20; ++i)
 	{
-		for (int j = 0; j < 2; ++j)
-		{
-			for (int k = 0; k < 16; i++)
-			{
-				printf("%s\n",pair[i][j]);
-			}
-			
-		}
-	}
+				char * key  = pair[i];
+				for (int i = 0; i < 2; ++i)
+				{
+					char * secret = key[i];
+					printf("%s\n","key:" );
+					print_key(key);
+
+				}
+	}*/
 
 	/*srand(time(NULL));
 	char secret_key[16];
