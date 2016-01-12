@@ -9,14 +9,14 @@ int main(int argc, char const *argv[])
 
 	char *p_pre_puzzle_key = pre_puzzle_key;
 	char *p_secret_key = secret_key;
-	char *p_pair = pair;
+	//char *p_pair = pair;
 
 	//get_key(p_pre_puzzle_key,p_secret_key);
 	//print_key(p_secret_key);
 	//print_key(p_pre_puzzle_key);
 
 
-	get_pair(20,p_pair);
+	char *ptr_pair = get_pair(20);
 	printf("%s\n","test1" );
 
 	/*for (int i = 0; i < 20; ++i)

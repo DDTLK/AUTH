@@ -19,10 +19,10 @@ void get_key(char * pre_puzzle_key, char * secret_key){
 	}
 }
 
-void get_pair(int n, char *pair){
+char get_pair(int n){
 	char pre_puzzle_key[16];
 	char secret_key[16];
-	char secret[2];
+	char secret[n][2];
 	char *ptr_pre_puzzle_key = pre_puzzle_key;
 	char *ptr_secret_key = secret_key;
 
@@ -30,12 +30,12 @@ void get_pair(int n, char *pair){
 	{
 		srand(time(0)*i);
 		get_key(ptr_pre_puzzle_key,ptr_secret_key);
-		secret[0] = pre_puzzle_key;
-		print_key(ptr_pre_puzzle_key);
-		print_key(ptr_secret_key);
-		secret[1] = secret_key;
-		pair[i]=secret;
+		secret[i][0] = pre_puzzle_key;
+		//print_key(ptr_pre_puzzle_key);
+		//print_key(ptr_secret_key);
+		secret[i][1] = secret_key;
 	}
+	return secret;
 }
 
 void print_key(char * key){

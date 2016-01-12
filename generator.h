@@ -8,6 +8,6 @@ char gen_random();
 
 void get_key(char * pre_puzzle_key, char * secret_key);
 
-void get_pair(int n, char * pair);
+void get_pair(int n);
 
 void print_key(char * key);
