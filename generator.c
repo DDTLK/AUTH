@@ -13,29 +13,32 @@ char gen_random() {
 
 void get_key(char * pre_puzzle_key, char * secret_key){	
 	for (int i = 0; i < 16; ++i)
-	{
+	{	
+		//
 		pre_puzzle_key[i] = gen_random();
 		secret_key[i] = gen_random();
 	}
 }
 
-char get_pair(int n){
+void get_pair(int n, char *pair[][2]){
 	char pre_puzzle_key[16];
 	char secret_key[16];
-	char secret[n][2];
+
 	char *ptr_pre_puzzle_key = pre_puzzle_key;
 	char *ptr_secret_key = secret_key;
 
 	for (int i = 0; i < n; ++i)
 	{
-		srand(time(0)*i);
+		//initialise seed value
+		srand(time(0)+i);
+		//get pair of secret string
 		get_key(ptr_pre_puzzle_key,ptr_secret_key);
-		secret[i][0] = pre_puzzle_key;
-		//print_key(ptr_pre_puzzle_key);
-		//print_key(ptr_secret_key);
-		secret[i][1] = secret_key;
+		//put string in pair
+		pair[i][0] = pre_puzzle_key;
+		pair[i][1] = secret_key;
+		print_key(ptr_pre_puzzle_key);
+		print_key(ptr_secret_key);
 	}
-	return secret;
 }
 
 void print_key(char * key){
