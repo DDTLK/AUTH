@@ -8,7 +8,8 @@
 int main(int argc, char const *argv[])
 {
 	Graphe graph;
-	char *tab[20];
+	char tab[20][16];
+
 	graph = genererGraphe3Coloriable();
 	for (int i = 0; i < sizeof(graph.node); ++i)
 	{
@@ -22,21 +23,17 @@ int main(int argc, char const *argv[])
 			if(j==i-1) printf("\n");
 		}
 	}
+	
 	getKey(tab);
-	for (int i = 0; i < TAILLE; ++i)
+	printf("\n");
+	/*for (int i = 0; i < TAILLE; ++i)
 	{
-		char *tmp = NULL;
-		tmp = tab[i];
-		printf("%c", *tab[i]);
-				printf("\n");
-
+		char *tmp = &tab[i];
 		for (int j = 0; j < 16; ++j)
 		{
-			printf("%s", &tmp[j]);
-			//if(j==16) printf("\n");
-			 
+			printf("%c", tmp[j]);	 
 		}
 		printf("\n");
-	}
+	}*/
 	return 0;
 }

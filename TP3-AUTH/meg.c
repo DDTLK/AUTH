@@ -1,24 +1,23 @@
 #include "meg.h"
 
-void getKey(char ** key)
+void getKey(char * key)
 {
-	char str1;
 	char tmp[16];
 	for (int i = 0; i < TAILLE; ++i)
 	{
-		srand(time(0)+i);
+		srand(time(0)*i+1);
 		for (int j = 0; j < 16; ++j)
 		{
-			str1 = number[rand() % (sizeof(number)-1)];
-			tmp[i] = str1;
-			//printf("%c",str1 );
+			tmp[j] = number[rand() % (sizeof(number)-1)];
+			printf("%c",tmp[j] );
 		}
-		//printf("\n");
+		printf("\n");
 		key[i] = tmp;
-		for (int i = 0; i < 20; ++i)
+		/*for (int j = 0; j < 16; ++j)
 		{
-			printf("%s\n",key[i] );
+			printf("%c", key[j]);	 
 		}
+		printf("\n");*/
 	}
+	printf("\n");
 }
-

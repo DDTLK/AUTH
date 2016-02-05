@@ -16,5 +16,5 @@ static const char number[] =
 *
 *
 */
-void getKey(char ** key);
+void getKey(char * key);
 
