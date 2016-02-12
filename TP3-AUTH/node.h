@@ -17,7 +17,7 @@ static const char color[]=
 /**
 *
 *	Creation aléatoire de noeuds de differente coulers
-*
-*
+*	input: tableau de charactère vide
+*	output: tableau de noeuds colorés
 */
 void colorNode(char *node);

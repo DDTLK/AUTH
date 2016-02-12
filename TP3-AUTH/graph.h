@@ -6,7 +6,7 @@
 
 /**
 *	Declaration des Graphes
-*
+*	noeuds et arcs
 */
 struct Graphe
 {
@@ -17,7 +17,7 @@ typedef struct Graphe Graphe;
 
 /**
 *	Generation des graphes
-*
-*
+*	
+*	return: graphe colorié
 */
 Graphe genererGraphe3Coloriable();
